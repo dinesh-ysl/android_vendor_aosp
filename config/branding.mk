@@ -19,6 +19,7 @@ CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(PEX_CODENAME)-$(CUSTOM_PLATFOR
 CUSTOM_VERSION_PROP := eleven
 
 PRODUCT_GENERIC_PROPERTIES += \
+    pex_version=$(PEX_VERSION) \
     org.pex.version=$(PEX_VERSION) \
     org.pex.version.prop=$(CUSTOM_VERSION_PROP) \
     org.pex.version.display=$(CUSTOM_VERSION) \
