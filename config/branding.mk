@@ -1,6 +1,7 @@
 # Set all versions
 PEX_BUILD_TYPE ?= UNOFFICIAL
-PEX_VERSION := 2.0
+PEX_VERSION := 2.1
+PEX_CODENAME := Phoenix
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -14,7 +15,7 @@ CUSTOM_PLATFORM_VERSION := 11
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(PEX_BUILD_TYPE)
+CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(PEX_CODENAME)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(PEX_BUILD_TYPE)
 CUSTOM_VERSION_PROP := eleven
 
 PRODUCT_GENERIC_PROPERTIES += \
@@ -23,4 +24,6 @@ PRODUCT_GENERIC_PROPERTIES += \
     org.pex.version.display=$(CUSTOM_VERSION) \
     org.pex.build_date=$(CUSTOM_BUILD_DATE) \
     org.pex.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pex.build_type=$(PEX_BUILD_TYPE)
+    org.pex.build_type=$(PEX_BUILD_TYPE) \
+    org.pex.build_codename=$(PEX_CODENAME)
+
